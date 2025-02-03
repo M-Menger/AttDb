@@ -1,17 +1,24 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import static org.example.services.ReadCsvToImport.importCsvToDb;
+import static org.example.services.SetupDataBase.setupDataBase;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        String inputFile = "C:\\Users\\Balcão\\Desktop\\Developing\\3.AreaDeTestes\\Java\\AttDB\\src\\main\\resources\\Teste.csv";
+        String outputFile = "C:\\Users\\Balcão\\Desktop\\Resultado.csv";
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        try{
+            System.out.println("Iniciando app...");
+            System.out.println("Setando banco de dados...");
+            setupDataBase();
+
+            System.out.println("Lendo arquivo CSV...");
+            importCsvToDb(inputFile);
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
+
     }
 }
