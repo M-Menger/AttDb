@@ -16,6 +16,8 @@ public class Main {
             System.out.println("Lendo arquivo CSV...");
             importCsvToDb(inputFile);
 
+            System.out.println("Proccess Finished!");
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

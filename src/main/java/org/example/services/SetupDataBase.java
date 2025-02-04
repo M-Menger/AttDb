@@ -16,11 +16,11 @@ public class SetupDataBase {
                     CREATE TABLE IF NOT EXISTS ATENDIMENTOS (
                     ID INTEGER PRIMARY KEY AUTOINCREMENT,
                     Atendimento TEXT,
-                    Número da OS TEXT,
+                    Número_da_OS TEXT,
                     Placa TEXT,
                     Modelo TEXT,
-                    Motivo da OS TEXT,
-                    Status da OS TEXT
+                    Motivo_da_OS TEXT,
+                    Status_da_OS TEXT
                     );
                     """;
             stmt.execute(sql);
