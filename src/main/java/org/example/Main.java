@@ -6,7 +6,6 @@ import static org.example.services.SetupDataBase.setupDataBase;
 public class Main {
     public static void main(String[] args) {
         String inputFile = "C:\\Users\\Balcão\\Desktop\\Developing\\3.AreaDeTestes\\Java\\AttDB\\src\\main\\resources\\Teste.csv";
-        String outputFile = "C:\\Users\\Balcão\\Desktop\\Resultado.csv";
 
         try{
             System.out.println("Iniciando app...");
